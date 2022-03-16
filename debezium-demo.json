@@ -1,0 +1,17 @@
+{
+    "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+    "database.server.name": "mydb",
+    "database.history.kafka.bootstrap.servers": "kafka:9092",
+    "database.history.kafka.topic": "debezium.mydb.history",
+    "database.dbname": "master",
+    "database.hostname": "sql-server",
+    "database.port": "1433",
+    "database.user": "sa",
+    "database.password": "SecretWord1!",
+    "include.schema.changes": "false",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "output.data.format": "JSON",
+    "snapshot.mode": "initial",
+    "table.include.list": "dbo.MyTestTable"
+}
