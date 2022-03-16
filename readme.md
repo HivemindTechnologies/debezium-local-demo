@@ -5,6 +5,13 @@ Setup:
 docker compose up
 ```
 
+Create topic for debezium history:
+```
+kafka_2.13-2.8.1/bin/kafka-topics.sh --bootstrap-server localhost:9092 --topic "debezium.mydb.history" --create
+```
+
+## kafka-connect
+
 Delete connector
 ```
 curl -X DELETE -H "Accept:application/json" -H "Content-Type:application/json" http://localhost:8083/connectors/my-test-debezium
